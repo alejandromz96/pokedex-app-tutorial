@@ -1,3 +1,9 @@
-# TypeScript Expo BinPar Boilerplate
+# Pokedex App Tutorial
 
-TypeScript Expo BinPar Boilerplate
+Pokedex App tutorial using:
+
+- typescript
+- eslint
+- jest
+- react-native
+- expo
