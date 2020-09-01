@@ -17,3 +17,9 @@ Pokedex App tutorial using:
 - Android studio installed *(for Android emulation)*
 
 > **Note**: To end the x-code install you will need to open it after the update
+
+## Notes
+
+```bash
+npm i axios
+```
