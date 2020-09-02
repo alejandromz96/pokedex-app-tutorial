@@ -6,8 +6,11 @@ import Holder, { HolderProps } from './Holder';
 
 interface ComponentProps extends HolderProps {
   children: ReactNode;
-  gradientOne?: string;
-  gradientTwo?: string;
+  bgColor?: string;
+}
+
+interface StyledProps {
+  bgColor?: string;
 }
 
 // #region
@@ -15,7 +18,7 @@ interface ComponentProps extends HolderProps {
 const StyledWrapper = styled(Holder)`
   flex: 1;
   align-items: center;
-  background-color: ${colors.white};
+  background-color: ${({ bgColor }: StyledProps): string => bgColor || colors.white};
 `;
 
 // #endregion
@@ -25,6 +28,7 @@ const Wrapper = ({
   justify,
   paddingTop,
   paddingBottom,
+  bgColor,
 }: ComponentProps): ReactElement => {
   const screen = useDimensions();
 
@@ -35,6 +39,7 @@ const Wrapper = ({
       justify={justify || 'flex-start'}
       paddingTop={paddingTop}
       paddingBottom={paddingBottom}
+      bgColor={bgColor}
     >
       {children}
     </StyledWrapper>

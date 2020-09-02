@@ -60,8 +60,8 @@ const app = (): ReactElement => {
 
   return (
     <Container>
-      <PokemonList />
-      {/* <PokemonDetail /> */}
+      {/* <PokemonList /> */}
+      <PokemonDetail />
       <StatusBar style="auto" />
     </Container>
   );
