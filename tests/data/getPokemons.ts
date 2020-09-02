@@ -1,11 +1,7 @@
-import axios from 'axios';
+import { getAllPokemonsList } from "../../logic/downloadPokemonData";
 
-interface PokemonList {
-  count: number;
-}
+
 test('Get Pokemon Info', async (): Promise<void> => {
-
-  const result = await axios.get<PokemonList>('https://pokeapi.co/api/v2/pokemon?limit=1000');
-  const {data} = result;  
+  const data = await getAllPokemonsList();
   expect(data.count).toBe(1050);
 });
